@@ -1,0 +1,15 @@
+2/16 - Began implementing Needleman algorithm. Started with making a struct to store the matrix and a struct to store all of the score information. Made the matrix.txt file and implemented reading the data in. Implemented reading in protein sequence.
+2/17 - Implemented calculating scores and backtracing. Got cases working up to length 4 but was having a leak of data for larger chains.
+2/19 - Found error with code, my dynamic arrays were given space in the opposite order or column * row instead or row * column which is what I had in mind when implementing. Fixing this error got the algorithm to work for every test case used. Finished Needleman.
+
+3/2 - Began implementing Hirschberg algorithm.
+3/3 - Still implementing parts of Hirschberg algorithm.
+3/7 - Getting many errors with Hirschberg algorithm and realized my starting implementation was wrong.
+3/10 - Started writing new implementation of Hirschberg algorithm with a better understanding of it.
+3/11 - Still writing new implementation of Hirschberg. Started with base cases where one sequence was of length 0 or 1. When 1, Needleman could just be used again.
+3/14 - Began testing Hirschberg and only the middle of the aligment was coming out correct.
+3/15 - Kept trying to fix bugs on alignment got the back half of the alignment to be correct but the front half was still not optimal
+3/17 - I found the bug that was causing improper alignment, it was in the PartitionX function where temp = ScoreT[i] + ScoreB[len - i]; , before I had temp = ScoreT[i] + ScoreB[i];.
+		I began testing and all alignments were coming out correct with same scores as my Needleman algorithm. Finished Hirshberg.
+
+3/18 - Wrote discussion.pdf.
